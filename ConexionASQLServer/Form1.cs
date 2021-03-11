@@ -21,7 +21,7 @@ namespace ConexionASQLServer
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SqlConnection conexion = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Shana\source\repos\ConexionASQLServer\ConexionASQLServer\SampleDataBase.mdf;Integrated Security=True");
+            SqlConnection conexion = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename="+Application.StartupPath+@"\SampleDataBase.mdf;Integrated Security=True");
             conexion.Open();
             MessageBox.Show("Se abrió la conexión con el servidor SQL Server y se seleccionó la base de datos");
             conexion.Close();
